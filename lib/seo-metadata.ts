@@ -214,7 +214,10 @@ export function generateComponentMetadata(
     selectedVariant?.name,
     isDefault
   )
-  const variantSlug = variantId ? extractVariantSlug(variantId, componentId) : undefined
+  // When showing the default variant, canonical must point to the base component URL
+  // (/component/[id]/) to avoid "Duplicate without user-selected canonical" in GSC.
+  // Non-default variants keep their own canonical (/component/[id]/[variant]/).
+  const variantSlug = (variantId && !isDefault) ? extractVariantSlug(variantId, componentId) : undefined
   const canonicalUrl = buildCanonicalUrl(componentId, variantSlug)
   const ogImageAlt = buildOgImageAlt(component.name, selectedVariant?.name)
 

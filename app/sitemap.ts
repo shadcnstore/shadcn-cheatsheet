@@ -29,8 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })
 
-    // Component variant pages
-    component.examples.forEach((example) => {
+    // Component variant pages — skip the default variant (first example) because
+    // it renders the same content as the base /component/[id]/ page. Including it
+    // causes "Duplicate without user-selected canonical" errors in GSC.
+    component.examples.forEach((example, index) => {
+      if (index === 0) return // default variant is already covered by the base URL
+
       const variantId = createVariantId(example, component.id)
       const variantSlug = extractVariantSlug(variantId, component.id)
 
