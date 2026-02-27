@@ -6,11 +6,14 @@ import { extractVariantSlug } from "@/lib/seo-metadata"
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://shadcnstore.com/cheatsheet"
   const currentDate = new Date()
+  const withTrailingSlash = (url: string): string => {
+    return url.endsWith("/") ? url : `${url}/`
+  }
 
   // Homepage
   const routes: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: withTrailingSlash(baseUrl),
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 1.0,
@@ -20,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Component pages - main component pages
   simpleComponents.forEach((component) => {
     routes.push({
-      url: `${baseUrl}/component/${component.id}`,
+      url: withTrailingSlash(`${baseUrl}/component/${component.id}`),
       lastModified: currentDate,
       changeFrequency: "weekly",
       priority: 0.8,
@@ -32,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const variantSlug = extractVariantSlug(variantId, component.id)
 
       routes.push({
-        url: `${baseUrl}/component/${component.id}/${variantSlug}`,
+        url: withTrailingSlash(`${baseUrl}/component/${component.id}/${variantSlug}`),
         lastModified: currentDate,
         changeFrequency: "weekly",
         priority: 0.7,
@@ -42,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Banner demo page (if it exists)
   routes.push({
-    url: `${baseUrl}/banner-demo`,
+    url: withTrailingSlash(`${baseUrl}/banner-demo`),
     lastModified: currentDate,
     changeFrequency: "monthly",
     priority: 0.5,
