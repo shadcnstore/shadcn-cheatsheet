@@ -16,7 +16,7 @@ export interface ComponentMetadataConfig {
  * SEO constants
  */
 export const SEO_CONSTANTS = {
-  baseUrl: "https://shadcnstore.com/cheatsheet",
+  baseUrl: "https://cheatsheet.shadcnstore.com",
   siteName: "Shadcn Store",
   defaultImage: "/og-image.png",
   imageWidth: 1200,
@@ -95,8 +95,8 @@ export function buildTitle(
   isDefault: boolean
 ): string {
   return isDefault
-    ? `Shadcn ${componentName} - Shadcn Store`
-    : `Shadcn ${componentName} | ${variantName} - Shadcn Store`
+    ? `${componentName} Component - shadcn/ui Examples | Shadcn Store`
+    : `${componentName} ${variantName} - shadcn/ui Component | Shadcn Store`
 }
 
 /**

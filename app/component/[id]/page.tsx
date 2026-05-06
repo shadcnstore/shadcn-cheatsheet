@@ -1,7 +1,16 @@
 import React, { Suspense } from "react"
 import { Metadata } from "next"
+import { components as simpleComponents } from "@/data/components-simple"
 import { generateComponentMetadata } from "@/lib/seo-metadata"
 import ComponentPageClient from "./component-page-client"
+
+const BASE_URL = "https://cheatsheet.shadcnstore.com"
+
+export async function generateStaticParams() {
+  return simpleComponents.map((component) => ({
+    id: component.id,
+  }))
+}
 
 // Generate metadata for SEO - automatically placed in <head> by Next.js
 export async function generateMetadata({
@@ -16,6 +25,23 @@ export async function generateMetadata({
 
   // Use centralized metadata generator (supports legacy query param format)
   return generateComponentMetadata(componentId, variantId)
+}
+
+function ComponentBreadcrumbJsonLd({ componentId, componentName }: { componentId: string; componentName: string }) {
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": `${BASE_URL}/` },
+      { "@type": "ListItem", "position": 2, "name": `${componentName} Component`, "item": `${BASE_URL}/component/${componentId}/` },
+    ]
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+    />
+  )
 }
 
 function ComponentPageFallback() {
@@ -36,10 +62,16 @@ export default async function ComponentPage({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
+  const component = simpleComponents.find((c) => c.id === id)
 
   return (
-    <Suspense fallback={<ComponentPageFallback />}>
-      <ComponentPageClient componentId={id} />
-    </Suspense>
+    <>
+      {component && (
+        <ComponentBreadcrumbJsonLd componentId={id} componentName={component.name} />
+      )}
+      <Suspense fallback={<ComponentPageFallback />}>
+        <ComponentPageClient componentId={id} />
+      </Suspense>
+    </>
   )
 }

@@ -47,13 +47,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // Banner demo page (if it exists)
-  routes.push({
-    url: withTrailingSlash(`${baseUrl}/banner-demo`),
-    lastModified: currentDate,
-    changeFrequency: "monthly",
-    priority: 0.5,
-  })
-
   return routes
 }
