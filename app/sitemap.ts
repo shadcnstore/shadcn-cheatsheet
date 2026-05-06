@@ -4,7 +4,7 @@ import { createVariantId } from "@/lib/data-adapter"
 import { extractVariantSlug } from "@/lib/seo-metadata"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://shadcnstore.com/cheatsheet"
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cheatsheet.shadcnstore.com"
   const currentDate = new Date()
   const withTrailingSlash = (url: string): string => {
     return url.endsWith("/") ? url : `${url}/`

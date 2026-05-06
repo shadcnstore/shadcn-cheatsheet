@@ -13,7 +13,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shadcnstore.com/cheatsheet"),
+  metadataBase: new URL("https://cheatsheet.shadcnstore.com"),
   title: "Shadcn UI Cheatsheet - Complete Component Guide & Examples",
   description:
     "Interactive Shadcn/UI cheatsheet with 45 components, live previews, copy-paste code examples, and props tables. Built with Next.js, Tailwind CSS, and TypeScript.",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shadcn UI Cheatsheet - Complete Component Guide",
     description: "Interactive cheatsheet for Shadcn/UI with live previews, examples, and documentation for 46+ components.",
-    url: "https://shadcnstore.com/cheatsheet",
+    url: "https://cheatsheet.shadcnstore.com",
     siteName: "Shadcn UI Cheatsheet",
     locale: "en_US",
     type: "website",
