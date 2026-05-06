@@ -25,6 +25,7 @@ import {
 import { ComponentPreview } from "@/components/ui/component-preview"
 import ComponentErrorBoundary from "@/components/ui/error-boundary"
 import { PreviewPanel } from "@/components/ui/preview-panel"
+import { BottomAEOContent } from "@/components/seo/bottom-aeo-content"
 import { useDynamicMetaTags } from "@/hooks/use-dynamic-meta-tags"
 
 // Get component data using adapter
@@ -249,6 +250,13 @@ export default function InterceptedComponentModal({
       currentIndex={navigationData.currentIndex}
       totalComponents={navigationData.totalComponents}
       variantDescription={metadataConfig?.description}
+      seoContent={
+        <BottomAEOContent
+          componentId={componentId}
+          componentName={componentData.name}
+          className="px-4 py-4 space-y-4"
+        />
+      }
     >
       <ComponentErrorBoundary>
         <ComponentPreview

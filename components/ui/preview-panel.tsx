@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { Blocks, ChevronLeft, ChevronRight, Copy, ExternalLink, LayoutTemplate, X } from "lucide-react"
 import { toast } from "sonner"
 
@@ -29,7 +29,8 @@ export interface PreviewPanelProps {
   packageManager?: "npm" | "yarn" | "pnpm" | "bun"
   currentIndex?: number
   totalComponents?: number
-  variantDescription?: string // Add variant description prop
+  variantDescription?: string
+  seoContent?: React.ReactNode
 }
 
 export const PreviewPanel: React.FC<PreviewPanelProps> = ({
@@ -41,8 +42,34 @@ export const PreviewPanel: React.FC<PreviewPanelProps> = ({
   packageManager = "npm",
   currentIndex,
   totalComponents,
-  variantDescription, // Destructure the new prop
+  variantDescription,
+  seoContent,
 }) => {
+  // Defer seoContent to client-only to avoid Radix Portal SSR hydration mismatch
+  const [mounted, setMounted] = useState(false)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Scroll to hash target after seoContent mounts
+  useEffect(() => {
+    if (!mounted) return
+    const hash = window.location.hash
+    if (!hash) return
+    const timer = setTimeout(() => {
+      const el = document.querySelector(hash)
+      if (el && scrollContainerRef.current) {
+        const container = scrollContainerRef.current
+        const elTop = (el as HTMLElement).getBoundingClientRect().top
+        const containerTop = container.getBoundingClientRect().top
+        container.scrollBy({ top: elTop - containerTop - 16, behavior: "smooth" })
+      }
+    }, 200)
+    return () => clearTimeout(timer)
+  }, [mounted])
+
   // Generate install command based on package manager
   const getInstallCommand = (component: ComponentData) => {
     const commands = {
@@ -111,10 +138,10 @@ export const PreviewPanel: React.FC<PreviewPanelProps> = ({
       <Sheet key={component?.id} open={isOpen} onOpenChange={onClose}>
         <SheetContent
           side="right"
-          className="w-[85%] max-w-none p-0 [&>button]:hidden gap-0 md:w-[75%] sm:max-w-none h-screen flex flex-col"
+          className="w-[85%] max-w-none p-0 [&>button]:hidden gap-0 md:w-[75%] sm:max-w-none flex flex-col"
           style={{
             maxWidth: "none",
-            height: "100vh",
+            height: "100dvh",
           }}
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
@@ -279,8 +306,20 @@ export const PreviewPanel: React.FC<PreviewPanelProps> = ({
             )}
           </SheetHeader>
 
-          {/* Panel Content */}
-          <div className="flex-1 overflow-hidden">{children}</div>
+          {/* Panel Content — scroll container takes remaining height after header */}
+          <div ref={scrollContainerRef} className="flex-1 overflow-y-auto min-h-0">
+            {/* Main content — h-full ensures it always fills the scroll viewport */}
+            <div className="h-full flex flex-col overflow-hidden">
+              {children}
+            </div>
+            {/* SEO content — client-only (prevents Portal SSR hydration mismatch).
+                Renders below the fold; user scrolls down to see it. */}
+            {mounted && seoContent && (
+              <div className="border-t" id="seo-content-section">
+                {seoContent}
+              </div>
+            )}
+          </div>
         </SheetContent>
       </Sheet>
     </TooltipProvider>

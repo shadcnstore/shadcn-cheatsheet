@@ -35,7 +35,7 @@ export const components: ComponentInfo[] = [
     id: "accordion",
     name: "Accordion",
     description:
-      "The Accordion component from Shadcn UI is a vertically stacked, collapsible React component built with Tailwind CSS for modern web applications. Perfect for Next.js projects, this accessible UI element organizes content into expandable sections, allowing users to show and hide information efficiently. Fully customizable with Radix UI primitives, the Shadcn accordion supports single or multiple open panels, smooth animations, and responsive design. Ideal for FAQs, documentation, settings panels, and any interface requiring organized, space-efficient content display in React applications.",
+      "Accessible collapsible panels for FAQs, docs, and settings. Built with Radix UI and Tailwind CSS for Next.js. Supports single or multiple open panels.",
     category: "layout",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/accordion",
@@ -52,7 +52,7 @@ export const components: ComponentInfo[] = [
   {
     id: "alert",
     name: "Alert",
-    description: "The Alert component from Shadcn UI is a versatile React notification element designed with Tailwind CSS for displaying important messages in Next.js applications. This accessible component supports multiple variants including default, destructive, and success states, making it perfect for error messages, warnings, and informational callouts. Built on open-source primitives, the Shadcn alert includes customizable icons, titles, and descriptions, ensuring clear user communication. Fully responsive and themeable, it integrates seamlessly into modern design systems and React workflows for effective user feedback.",
+    description: "Styled notification banners for errors, warnings, and info messages. shadcn/ui Alert supports default and destructive variants with icons and descriptions.",
     category: "feedback",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/alert",
@@ -74,7 +74,7 @@ export const components: ComponentInfo[] = [
   {
     id: "button",
     name: "Button",
-    description: "The Button component from Shadcn UI is a highly customizable React element built with Tailwind CSS, offering multiple variants for modern Next.js applications. Supporting primary, secondary, destructive, outline, ghost, and link styles, this accessible component adapts to any design system. Each button variant includes different sizes, loading states, and icon support, making it perfect for forms, CTAs, and interactive UI elements. Fully responsive and keyboard-navigable, the Shadcn button integrates seamlessly into React workflows, providing developers with a flexible, production-ready solution for creating engaging user interfaces.",
+    description: "shadcn/ui Button with primary, secondary, destructive, outline, ghost, and link variants. Supports icons, loading states, and all sizes for React and Next.js.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/button",
@@ -131,7 +131,7 @@ export const components: ComponentInfo[] = [
   {
     id: "button-group",
     name: "Button Group",
-    description: "The Button Group component from Shadcn UI is a flexible React container built with Tailwind CSS that groups related buttons with consistent styling and spacing. Perfect for Next.js applications, this component supports horizontal and vertical orientations, size variants, and integration with dropdowns, inputs, and popovers. The accessible button group maintains visual hierarchy while reducing layout complexity in toolbars, forms, and navigation elements. Fully customizable with separators, nested groups, and responsive behavior, it provides developers with a clean solution for organizing multiple action buttons in modern design systems.",
+    description: "Group related buttons with consistent spacing and styling. shadcn/ui Button Group supports horizontal, vertical, split-button, and dropdown patterns.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/button-group",
@@ -198,7 +198,7 @@ export const components: ComponentInfo[] = [
   {
     id: "card",
     name: "Card",
-    description: "The Card component from Shadcn UI is a versatile React container built with Tailwind CSS for displaying grouped content in Next.js applications. Featuring a structured layout with header, content, and footer sections, this accessible component is perfect for product displays, user profiles, blog posts, and dashboard widgets. Fully customizable with shadows, borders, and hover effects, the Shadcn card integrates seamlessly into modern design systems. Responsive and themeable, it provides developers with a clean, reusable pattern for organizing information in visually appealing card-based layouts.",
+    description: "Structured container with header, content, and footer sections. shadcn/ui Card is ideal for dashboards, product displays, profiles, and blog posts.",
     category: "display",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/card",
@@ -215,7 +215,7 @@ export const components: ComponentInfo[] = [
   {
     id: "empty",
     name: "Empty",
-    description: "The Empty component from Shadcn UI is a feedback React element built with Tailwind CSS for Next.js applications, designed to communicate empty states with clarity and visual appeal. This customizable component displays when lists, search results, or data collections have no content to show, featuring icons, descriptive text, and optional call-to-action buttons. Perfect for empty shopping carts, no search results, zero notifications, and blank dashboards, the Shadcn empty state improves user experience by providing context and guidance rather than showing blank spaces. With multiple style variants including outlined, background, icon-based, and avatar styles, this component helps developers create informative and engaging empty states that encourage user action in modern React applications.",
+    description: "Informative empty state with icon, message, and optional CTA for no-content scenarios. shadcn/ui Empty supports avatar, background, and outline variants.",
     category: "feedback",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/empty",
@@ -262,7 +262,7 @@ export const components: ComponentInfo[] = [
   {
     id: "checkbox",
     name: "Checkbox",
-    description: "The Checkbox component from Shadcn UI is an accessible React form element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This customizable component supports form validation, controlled and uncontrolled modes, and keyboard navigation, making it perfect for multi-select interfaces, preference settings, and task lists. With built-in indeterminate state support and seamless integration with React Hook Form and other form libraries, the Shadcn checkbox provides developers with a robust, WCAG-compliant solution for boolean input controls. Features smooth animations and supports custom icons for enhanced user experience.",
+    description: "Accessible checkbox built with Radix UI for React Hook Form, multi-select, and settings. Supports indeterminate state, keyboard navigation, and validation.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/checkbox",
@@ -294,7 +294,7 @@ export const components: ComponentInfo[] = [
   {
     id: "input",
     name: "Input",
-    description: "The Input component from Shadcn UI is a versatile React form element built with Tailwind CSS for Next.js applications, providing developers with accessible text input capabilities. Supporting multiple input types including text, email, password, number, and file uploads, this component integrates seamlessly with React Hook Form and other validation libraries. Features include custom styling, disabled states, prefix/suffix icons, and error handling. Perfect for login forms, search bars, data entry interfaces, and complex form workflows, the Shadcn input offers full keyboard navigation and ARIA support for screen readers. Responsive and customizable, it adapts to any design system while maintaining consistent behavior across browsers.",
+    description: "Accessible text input for text, email, password, and file types. shadcn/ui Input integrates with React Hook Form for validation and error states in Next.js.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/input",
@@ -336,7 +336,7 @@ export const components: ComponentInfo[] = [
   {
     id: "badge",
     name: "Badge",
-    description: "The Badge component from Shadcn UI is a compact React element built with Tailwind CSS for highlighting status, labels, and metadata in Next.js applications. Supporting multiple variants including default, secondary, destructive, and outline styles, this accessible component is perfect for notification counts, status indicators, tags, and category labels. Fully customizable with different sizes and colors, the Shadcn badge integrates seamlessly into buttons, cards, and lists. Responsive and lightweight, it provides developers with a versatile solution for adding visual emphasis and contextual information to modern React interfaces.",
+    description: "Compact label for status, categories, and counts. shadcn/ui Badge supports default, secondary, destructive, and outline variants in React and Next.js apps.",
     category: "display",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/badge",
@@ -368,7 +368,7 @@ export const components: ComponentInfo[] = [
   {
     id: "avatar",
     name: "Avatar",
-    description: "The Avatar component from Shadcn UI is a user representation React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component displays user profile images with automatic fallback to initials or placeholder icons when images fail to load. Perfect for user profiles, comment sections, team member lists, and social interfaces, the Shadcn avatar supports multiple sizes, custom colors, group layouts, and status indicators. With built-in image lazy loading, alt text support for accessibility, and circular or rounded styling options, this component provides developers with a professional solution for user identity representation in modern React applications.",
+    description: "User profile image with automatic fallback to initials. shadcn/ui Avatar built with Radix UI supports sizes, groups, and lazy-loading in React and Next.js.",
     category: "display",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/avatar",
@@ -385,7 +385,7 @@ export const components: ComponentInfo[] = [
   {
     id: "separator",
     name: "Separator",
-    description: "The Separator component from Shadcn UI is a divider React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component creates visual or semantic boundaries between content sections, menu items, or interface elements with horizontal or vertical orientation. Perfect for organizing layouts, separating navigation items, dividing form sections, and improving content hierarchy, the Shadcn separator supports custom colors, thickness, and semantic HTML with proper ARIA attributes. Lightweight and flexible, this component provides developers with a clean solution for content organization and visual structure in modern React applications.",
+    description: "Thin horizontal or vertical divider for separating content sections. shadcn/ui Separator built with Radix UI with full ARIA support for React and Next.js.",
     category: "layout",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/separator",
@@ -419,7 +419,7 @@ export const components: ComponentInfo[] = [
   {
     id: "aspect-ratio",
     name: "Aspect Ratio",
-    description: "The Aspect Ratio component from Shadcn UI is a layout React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This utility component maintains consistent width-to-height proportions for images, videos, iframes, and embedded content across different screen sizes and responsive layouts. Perfect for video players, image galleries, map embeds, and media content that requires specific dimensions, the Shadcn aspect ratio prevents layout shifts and content distortion. Supporting common ratios like 16:9, 4:3, 1:1, and custom proportions, this component provides developers with a reliable solution for responsive media containers in modern React applications.",
+    description: "Maintains consistent width-to-height proportions for images and video. shadcn/ui Aspect Ratio prevents layout shift with 16:9, 4:3, 1:1, and custom ratios.",
     category: "layout",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/aspect-ratio",
@@ -436,7 +436,7 @@ export const components: ComponentInfo[] = [
   {
     id: "breadcrumb",
     name: "Breadcrumb",
-    description: "The Breadcrumb component from Shadcn UI is a navigation React element built with Tailwind CSS for Next.js applications, displaying hierarchical page paths to improve user orientation and navigation. This accessible component shows the current page's location within the site structure with clickable links to parent pages, enhancing usability for deep content hierarchies. Perfect for e-commerce categories, documentation sites, multi-level dashboards, and complex web applications, the Shadcn breadcrumb supports separators, collapsed items, and responsive behavior. With semantic HTML markup and ARIA attributes for screen readers, this component provides developers with a WCAG-compliant wayfinding solution for modern React applications.",
+    description: "Hierarchical page path navigation with clickable parent links. shadcn/ui Breadcrumb supports collapsed items, custom separators, and ARIA for Next.js.",
     category: "navigation",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/breadcrumb",
@@ -478,7 +478,7 @@ export const components: ComponentInfo[] = [
   {
     id: "calendar",
     name: "Calendar",
-    description: "The Calendar component from Shadcn UI is a date selection React element built with React DayPicker and styled with Tailwind CSS for Next.js applications. This accessible form component allows users to view and select dates with an interactive monthly grid interface featuring keyboard navigation and locale support. Perfect for booking systems, date pickers, event schedulers, and date range selectors, the Shadcn calendar supports single dates, date ranges, multiple selections, disabled dates, and custom styling. With built-in internationalization for different calendar systems including Persian calendars, timezone handling, and ARIA attributes for screen readers, this component provides developers with a comprehensive date selection solution for modern React applications.",
+    description: "Interactive monthly date picker built with React DayPicker. shadcn/ui Calendar supports single, range, and multiple selections with locale and keyboard nav.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/calendar",
@@ -520,7 +520,7 @@ export const components: ComponentInfo[] = [
   {
     id: "carousel",
     name: "Carousel",
-    description: "The Carousel component from Shadcn UI is an interactive slideshow React element built with Embla Carousel and styled with Tailwind CSS for Next.js applications. This accessible component displays multiple content items in a scrollable, swipeable interface with navigation controls and automatic playback options. Perfect for image galleries, product showcases, testimonials, and featured content sections, the Shadcn carousel supports horizontal and vertical orientations, custom spacing, loop behavior, and responsive breakpoints. With built-in touch gestures for mobile devices, keyboard navigation, and plugin support for autoplay and pagination, this component provides developers with a versatile solution for creating engaging content sliders in modern React applications.",
+    description: "Touch-friendly image slideshow built with Embla Carousel. shadcn/ui Carousel supports autoplay, loop, orientation, and responsive sizing for Next.js.",
     category: "display",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/carousel",
@@ -562,7 +562,7 @@ export const components: ComponentInfo[] = [
   {
     id: "collapsible",
     name: "Collapsible",
-    description: "The Collapsible component from Shadcn UI is an expandable content React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component toggles visibility of content sections with smooth animations, allowing users to show and hide information on demand. Perfect for FAQ sections, advanced settings panels, expandable lists, and progressive disclosure interfaces, the Shadcn collapsible supports controlled and uncontrolled modes, custom triggers, and keyboard navigation. With built-in ARIA attributes for screen reader support and animated transitions, this component provides developers with a clean solution for organizing and revealing optional content in modern React applications.",
+    description: "Toggle content visibility with smooth animations. shadcn/ui Collapsible built with Radix UI supports controlled mode, custom triggers, and ARIA for React.",
     category: "layout",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/collapsible",
@@ -579,7 +579,7 @@ export const components: ComponentInfo[] = [
   {
     id: "combobox",
     name: "Combobox",
-    description: "The Combobox component from Shadcn UI is an autocomplete search React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component combines a text input with a filterable dropdown list, enabling users to search and select from large datasets efficiently. Perfect for country selectors, product searches, user mentions, and command palettes, the Shadcn combobox supports keyboard navigation, fuzzy search, custom filtering, and async data loading. With built-in ARIA attributes, popover and dropdown variants, and seamless integration with React Hook Form, this component provides developers with a powerful solution for searchable select inputs in modern React applications.",
+    description: "Searchable autocomplete select built with cmdk. shadcn/ui Combobox supports fuzzy search, async loading, and React Hook Form integration for Next.js.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/combobox",
@@ -611,7 +611,7 @@ export const components: ComponentInfo[] = [
   {
     id: "command",
     name: "Command",
-    description: "The Command component from Shadcn UI is a fast command palette React element built with cmdk library and styled with Tailwind CSS for Next.js applications. This accessible component provides keyboard-driven navigation for executing actions, searching content, and accessing application features quickly. Perfect for admin dashboards, developer tools, productivity apps, and power-user interfaces, the Shadcn command menu supports fuzzy search, grouped items, keyboard shortcuts, and custom actions. With built-in ARIA attributes, dialog mode for spotlight search, and responsive filtering, this component provides developers with a professional solution for command-driven workflows and efficient navigation in modern React applications.",
+    description: "Keyboard-driven command palette built with cmdk. shadcn/ui Command supports fuzzy search, grouped actions, shortcuts, and dialog spotlight mode for Next.js.",
     category: "navigation",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/command",
@@ -633,7 +633,7 @@ export const components: ComponentInfo[] = [
   {
     id: "context-menu",
     name: "Context Menu",
-    description: "The Context Menu component from Shadcn UI is a right-click activated menu React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component displays contextual actions and options when users right-click or long-press on elements, providing quick access to relevant commands. Perfect for file managers, image editors, data tables, and desktop-like web applications, the Shadcn context menu supports nested submenus, keyboard navigation, checkboxes, radio groups, and custom content. With built-in ARIA attributes, touch support for mobile devices, and click-outside-to-close behavior, this component provides developers with a powerful solution for contextual interactions in modern React applications.",
+    description: "Right-click contextual menu built with Radix UI. shadcn/ui Context Menu supports submenus, checkboxes, radio groups, and keyboard nav for React and Next.js.",
     category: "overlay",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/context-menu",
@@ -650,7 +650,7 @@ export const components: ComponentInfo[] = [
   {
     id: "date-picker",
     name: "Date Picker",
-    description: "The Date Picker component from Shadcn UI is a calendar-based date selection React element built with React DayPicker and styled with Tailwind CSS for Next.js applications. This accessible component combines a popover trigger with an interactive calendar for intuitive date input in forms. Perfect for booking systems, event scheduling, date filtering, and form inputs requiring date selection, the Shadcn date picker supports single dates, date ranges, presets for common selections, and disabled dates. With built-in integration with React Hook Form, keyboard navigation, and customizable date formats, this component provides developers with a user-friendly solution for date input fields in modern React applications.",
+    description: "Date input using Calendar in a Popover. shadcn/ui Date Picker supports single dates, ranges, presets, and React Hook Form integration for Next.js.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/date-picker",
@@ -672,7 +672,7 @@ export const components: ComponentInfo[] = [
   {
     id: "field",
     name: "Field",
-    description: "The Field component from Shadcn UI is a form field wrapper React element built with Tailwind CSS for Next.js applications, providing consistent labeling, error messaging, and help text for form controls. This accessible component creates structured form layouts with proper label associations, validation states, and error displays. Perfect for complex forms, data entry interfaces, and settings panels, the Shadcn field supports all input types including checkboxes, radio buttons, selects, and custom controls. With built-in responsive layouts, required indicators, and ARIA attributes, this component provides developers with a comprehensive solution for building accessible, well-structured forms in modern React applications.",
+    description: "Form field wrapper with label, helper text, and error display. shadcn/ui Field supports all input types with ARIA attributes and responsive layout for Next.js.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/field",
@@ -681,62 +681,62 @@ export const components: ComponentInfo[] = [
     examples: [
       {
         name: "Default",
-        description: "A field demo.",
+        description: "A standard form field with label, helper text, and error display for accessible input controls.",
         registryName: "field-demo",
       },
       {
         name: "Checkbox",
-        description: "A field with checkbox.",
+        description: "A form field wrapping a checkbox input with label, validation, and error message display.",
         registryName: "field-checkbox",
       },
       {
         name: "Choice Card",
-        description: "A field with choice card.",
+        description: "A form field using choice cards for visual option selection in multi-step forms.",
         registryName: "field-choice-card",
       },
       {
         name: "Fieldset",
-        description: "A field with fieldset.",
+        description: "A fieldset field variant grouping related controls with a shared legend and validation state.",
         registryName: "field-fieldset",
       },
       {
         name: "Group",
-        description: "A field group.",
+        description: "A field group layout displaying multiple form fields in a structured, aligned row.",
         registryName: "field-group",
       },
       {
         name: "Input",
-        description: "A field with input.",
+        description: "A form field wrapping a text input with label, placeholder, and inline error messaging.",
         registryName: "field-input",
       },
       {
         name: "Radio",
-        description: "A field with radio.",
+        description: "A form field wrapping radio group controls for single-selection with accessible labels.",
         registryName: "field-radio",
       },
       {
         name: "Responsive",
-        description: "A responsive field.",
+        description: "A responsive form field that adapts layout between stacked (mobile) and inline (desktop) modes.",
         registryName: "field-responsive",
       },
       {
         name: "Select",
-        description: "A field with select.",
+        description: "A form field wrapping a select dropdown with label and validation for option selection.",
         registryName: "field-select",
       },
       {
         name: "Slider",
-        description: "A field with slider.",
+        description: "A form field wrapping a range slider with label, value display, and validation messaging.",
         registryName: "field-slider",
       },
       {
         name: "Switch",
-        description: "A field with switch.",
+        description: "A form field wrapping a toggle switch with descriptive label for boolean settings.",
         registryName: "field-switch",
       },
       {
         name: "Textarea",
-        description: "A field with textarea.",
+        description: "A form field wrapping a multi-line textarea with character count and error state handling.",
         registryName: "field-textarea",
       },
     ],
@@ -744,7 +744,7 @@ export const components: ComponentInfo[] = [
   {
     id: "dialog",
     name: "Dialog",
-    description: "The Dialog component from Shadcn UI is a modal overlay React component built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component creates focused user interactions by displaying content above the primary interface with backdrop dimming and focus trapping. Perfect for confirmations, forms, alerts, and complex interactions, the Shadcn dialog supports keyboard navigation with ESC to close and Tab key focus management. Features include customizable sizes, smooth animations, scroll locking, and portal rendering. Fully WCAG-compliant with ARIA attributes, the dialog provides developers with a robust solution for modal workflows, user prompts, and layered content presentation in modern React applications.",
+    description: "Accessible modal with focus trap, ESC close, and backdrop. shadcn/ui Dialog built with Radix UI supports forms, confirmations, and nested content in Next.js.",
     category: "overlay",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/dialog",
@@ -761,7 +761,7 @@ export const components: ComponentInfo[] = [
   {
     id: "drawer",
     name: "Drawer",
-    description: "The Drawer component from Shadcn UI is a slide-in panel React element built with Vaul library and styled with Tailwind CSS for Next.js applications. This accessible component displays content from the edge of the screen with smooth slide-in animations, commonly used for mobile navigation and secondary content. Perfect for mobile menus, filter panels, shopping carts, and settings panels, the Shadcn drawer supports multiple directions (left, right, top, bottom), drag-to-close gestures, and nested scrolling. With built-in focus management, ARIA attributes, and responsive behavior, this component provides developers with a mobile-friendly solution for slide-out navigation and overlay content in modern React applications.",
+    description: "Mobile-friendly slide-in panel built with Vaul. shadcn/ui Drawer supports multiple directions, drag-to-close, and nested scrolling for React and Next.js apps.",
     category: "overlay",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/drawer",
@@ -778,7 +778,7 @@ export const components: ComponentInfo[] = [
   {
     id: "dropdown-menu",
     name: "Dropdown Menu",
-    description: "The Dropdown Menu component from Shadcn UI is a versatile React overlay built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component displays contextual actions, navigation options, and grouped menu items triggered by buttons or other interactive elements. Perfect for user menus, context actions, settings panels, and navigation shortcuts, the Shadcn dropdown menu supports nested submenus, keyboard navigation with Arrow keys, radio groups, checkboxes, and separators for visual organization. With built-in ARIA attributes, focus management, and click-outside-to-close behavior, this component provides developers with a professional solution for action menus and command palettes in modern React applications.",
+    description: "Contextual action menu built with Radix UI. shadcn/ui Dropdown Menu supports submenus, checkboxes, radio groups, and keyboard navigation for React and Next.js.",
     category: "overlay",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/dropdown-menu",
@@ -805,7 +805,7 @@ export const components: ComponentInfo[] = [
   {
     id: "hover-card",
     name: "Hover Card",
-    description: "The Hover Card component from Shadcn UI is a preview popup React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component displays rich content previews when users hover over links or interactive elements, providing contextual information without navigation. Perfect for user profile previews, link previews, product quick views, and content summaries, the Shadcn hover card supports custom positioning, delay timing, and rich media content. With built-in ARIA attributes, keyboard navigation, and smart positioning to stay within viewport bounds, this component provides developers with an elegant solution for progressive disclosure and content previews in modern React applications.",
+    description: "Preview popup on hover for links and interactive elements. shadcn/ui Hover Card built with Radix UI supports custom positioning, delay, and rich content.",
     category: "overlay",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/hover-card",
@@ -822,7 +822,7 @@ export const components: ComponentInfo[] = [
   {
     id: "input-group",
     name: "Input Group",
-    description: "The Input Group component from Shadcn UI is a composite form control React element built with Tailwind CSS for Next.js applications, combining inputs with addons, buttons, and icons in unified layouts. This accessible component creates enhanced input fields with prefixes, suffixes, and integrated actions for improved user experience. Perfect for search bars with buttons, currency inputs with symbols, URL fields with protocol indicators, and measurement inputs with unit labels, the Shadcn input group supports dropdowns, spinners, tooltips, and custom content. With responsive behavior and consistent styling, this component provides developers with a flexible solution for complex input patterns in modern React applications.",
+    description: "Combine inputs with buttons, icons, and dropdowns in one layout. shadcn/ui Input Group supports text, icon, spinner, and tooltip addons for React forms.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/input-group",
@@ -831,52 +831,52 @@ export const components: ComponentInfo[] = [
     examples: [
       {
         name: "Default",
-        description: "An input group demo.",
+        description: "A standard input group combining a text field with addons for enhanced form controls.",
         registryName: "input-group-demo",
       },
       {
         name: "Button",
-        description: "An input group with button.",
+        description: "An input group with an action button attached for search bars and submit-on-type patterns.",
         registryName: "input-group-button",
       },
       {
         name: "Custom",
-        description: "A custom input group.",
+        description: "A fully custom input group with arbitrary content prefix and suffix addons.",
         registryName: "input-group-custom",
       },
       {
         name: "Dropdown",
-        description: "An input group with dropdown.",
+        description: "An input group with an attached dropdown for protocol selectors, currency pickers, and type filters.",
         registryName: "input-group-dropdown",
       },
       {
         name: "Icon",
-        description: "An input group with icon.",
+        description: "An input group with a leading or trailing icon for search fields and formatted inputs.",
         registryName: "input-group-icon",
       },
       {
         name: "Label",
-        description: "An input group with label.",
+        description: "An input group with an embedded label addon for unit indicators like px, %, and currency symbols.",
         registryName: "input-group-label",
       },
       {
         name: "Spinner",
-        description: "An input group with spinner.",
+        description: "An input group with loading spinner indicator for async validation and live-search fields.",
         registryName: "input-group-spinner",
       },
       {
         name: "Text",
-        description: "An input group with text.",
+        description: "An input group with a static text prefix or suffix addon like 'https://' or '.com'.",
         registryName: "input-group-text",
       },
       {
         name: "Textarea",
-        description: "An input group with textarea.",
+        description: "An input group with a multi-line textarea and addons for rich text input with context.",
         registryName: "input-group-textarea",
       },
       {
         name: "Tooltip",
-        description: "An input group with tooltip.",
+        description: "An input group with a tooltip addon explaining the expected input format or constraints.",
         registryName: "input-group-tooltip",
       },
     ],
@@ -884,7 +884,7 @@ export const components: ComponentInfo[] = [
   {
     id: "input-otp",
     name: "Input OTP",
-    description: "The Input OTP component from Shadcn UI is a one-time password input React element built with input-otp library and styled with Tailwind CSS for Next.js applications. This accessible component creates segmented input fields for entering verification codes, PINs, and one-time passwords with automatic focus management. Perfect for two-factor authentication, SMS verification, email confirmations, and security codes, the Shadcn input OTP supports custom patterns, separators, paste functionality, and controlled modes. With built-in ARIA attributes, keyboard navigation, and integration with React Hook Form, this component provides developers with a secure, user-friendly solution for OTP entry in modern React applications.",
+    description: "Segmented OTP input for verification codes and PINs. shadcn/ui Input OTP supports custom patterns, separators, paste, and React Hook Form for Next.js.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/input-otp",
@@ -921,7 +921,7 @@ export const components: ComponentInfo[] = [
   {
     id: "item",
     name: "Item",
-    description: "The Item component from Shadcn UI is a versatile list item React element built with Tailwind CSS for Next.js applications, providing consistent layouts for content lists and menu items. This accessible component supports various content types including text, icons, avatars, images, and actions in structured layouts. Perfect for contact lists, navigation menus, notification feeds, and data lists, the Shadcn item supports multiple size variants, clickable links, dropdown integration, and custom content arrangements. With responsive behavior and semantic HTML structure, this component provides developers with a flexible building block for list-based interfaces in modern React applications.",
+    description: "Versatile list item with support for avatars, icons, images, dropdowns, and links. shadcn/ui Item provides consistent layouts for content lists and navigation menus.",
     category: "display",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/item",
@@ -930,52 +930,52 @@ export const components: ComponentInfo[] = [
     examples: [
       {
         name: "Default",
-        description: "An item demo.",
+        description: "A standard list item with title and description for content lists and menu items.",
         registryName: "item-demo",
       },
       {
         name: "Avatar",
-        description: "An item with avatar.",
+        description: "A list item with user avatar for contact lists, team views, and user-centric displays.",
         registryName: "item-avatar",
       },
       {
         name: "Dropdown",
-        description: "An item with dropdown.",
+        description: "A list item with an inline dropdown menu for quick contextual actions on each row.",
         registryName: "item-dropdown",
       },
       {
         name: "Group",
-        description: "An item group.",
+        description: "A grouped list of items with a shared section heading for organized content displays.",
         registryName: "item-group",
       },
       {
         name: "Header",
-        description: "An item with header.",
+        description: "A list item with a prominent header section for categorized lists and section titles.",
         registryName: "item-header",
       },
       {
         name: "Icon",
-        description: "An item with icon.",
+        description: "A list item with leading icon for navigation menus, feature lists, and icon-labeled rows.",
         registryName: "item-icon",
       },
       {
         name: "Image",
-        description: "An item with image.",
+        description: "A list item with thumbnail image for media libraries, product lists, and visual catalogs.",
         registryName: "item-image",
       },
       {
         name: "Link",
-        description: "An item link.",
+        description: "A fully clickable list item styled as a link for navigation menus and content listings.",
         registryName: "item-link",
       },
       {
         name: "Size",
-        description: "Item with different sizes.",
+        description: "List item size variants (small, medium, large) for compact and spacious layout contexts.",
         registryName: "item-size",
       },
       {
         name: "Variant",
-        description: "Item with different variants.",
+        description: "Item style variants including default, muted, and destructive for different semantic contexts.",
         registryName: "item-variant",
       },
     ],
@@ -983,7 +983,7 @@ export const components: ComponentInfo[] = [
   {
     id: "label",
     name: "Label",
-    description: "The Label component from Shadcn UI is a form label React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component creates semantic associations between labels and form controls, improving usability and accessibility. Perfect for all form inputs, checkboxes, radio buttons, and custom form controls, the Shadcn label automatically focuses associated inputs when clicked and provides proper ARIA relationships. With customizable styling, required indicators, and error states, this WCAG-compliant component provides developers with an essential building block for accessible forms in modern React applications.",
+    description: "Accessible form label with click-to-focus for inputs and form controls. shadcn/ui Label built with Radix UI supports required states and ARIA associations.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/label",
@@ -1000,7 +1000,7 @@ export const components: ComponentInfo[] = [
   {
     id: "kbd",
     name: "Kbd",
-    description: "The Kbd component from Shadcn UI is a keyboard key display React element built with Tailwind CSS for Next.js applications, visually representing keyboard shortcuts and key combinations. This accessible component styles keyboard key indicators with platform-appropriate styling for documentation, tooltips, and UI hints. Perfect for keyboard shortcut guides, command palettes, help documentation, and accessibility instructions, the Shadcn kbd supports key grouping, modifier keys (Ctrl, Alt, Shift), and custom styling. With semantic HTML and clear visual hierarchy, this component provides developers with a professional solution for displaying keyboard interactions in modern React applications.",
+    description: "Visual keyboard key indicator for shortcuts and key combos. shadcn/ui Kbd supports modifier keys, key groups, button and tooltip integration for React.",
     category: "display",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/kbd",
@@ -1009,27 +1009,27 @@ export const components: ComponentInfo[] = [
     examples: [
       {
         name: "Default",
-        description: "A kbd demo.",
+        description: "A standard keyboard key indicator for displaying shortcuts and key names in documentation.",
         registryName: "kbd-demo",
       },
       {
         name: "Button",
-        description: "A kbd with button.",
+        description: "A keyboard key displayed alongside a button for showing associated keyboard shortcuts.",
         registryName: "kbd-button",
       },
       {
         name: "Group",
-        description: "A kbd group.",
+        description: "A keyboard shortcut combination group showing multi-key sequences like Ctrl+Shift+P.",
         registryName: "kbd-group",
       },
       {
         name: "Input Group",
-        description: "A kbd with input group.",
+        description: "A keyboard key indicator embedded in an input group for shortcut hints and search fields.",
         registryName: "kbd-input-group",
       },
       {
         name: "Tooltip",
-        description: "A kbd with tooltip.",
+        description: "A keyboard shortcut shown inside a tooltip for discoverable keyboard navigation hints.",
         registryName: "kbd-tooltip",
       },
     ],
@@ -1037,7 +1037,7 @@ export const components: ComponentInfo[] = [
   {
     id: "menubar",
     name: "Menubar",
-    description: "The Menubar component from Shadcn UI is a persistent menu bar React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component displays a horizontal set of menu triggers commonly found in desktop applications like File, Edit, View menus. Perfect for application toolbars, document editors, and desktop-style web applications, the Shadcn menubar supports nested submenus, keyboard navigation, checkboxes, radio groups, and separators. With built-in ARIA attributes for screen reader support and cross-platform keyboard shortcuts, this component provides developers with a professional solution for application-style menu systems in modern React applications.",
+    description: "Desktop-style horizontal menu bar built with Radix UI. shadcn/ui Menubar supports submenus, checkboxes, radio groups, and keyboard shortcuts for Next.js.",
     category: "navigation",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/menubar",
@@ -1054,7 +1054,7 @@ export const components: ComponentInfo[] = [
   {
     id: "navigation-menu",
     name: "Navigation Menu",
-    description: "The Navigation Menu component from Shadcn UI is a hierarchical navigation React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component creates dropdown-enabled main navigation with support for nested menus, mega menus, and content-rich dropdowns. Perfect for website headers, main navigation bars, and complex menu systems, the Shadcn navigation menu supports keyboard navigation with Arrow keys, hover and click triggers, and responsive behavior. With built-in ARIA attributes, viewport awareness, and smooth animations, this component provides developers with a professional solution for primary site navigation in modern React applications.",
+    description: "Primary site nav with dropdown menus built with Radix UI. shadcn/ui Navigation Menu supports mega menus, keyboard Arrow key navigation, and viewport-aware positioning.",
     category: "navigation",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/navigation-menu",
@@ -1071,7 +1071,7 @@ export const components: ComponentInfo[] = [
   {
     id: "native-select",
     name: "Native Select",
-    description: "The Native Select component from Shadcn UI is a styled native dropdown React element built with Tailwind CSS for Next.js applications, providing enhanced styling for standard HTML select elements. This accessible component maintains native browser functionality while applying consistent design system styling. Perfect for forms requiring native select behavior, mobile-optimized dropdowns, and simple option selection, the Shadcn native select supports option groups, disabled states, validation styling, and form integration. With full browser compatibility, native mobile keyboards, and semantic HTML, this component provides developers with a lightweight, accessible alternative to custom select components in modern React applications.",
+    description: "Styled HTML select for mobile-optimized forms. shadcn/ui Native Select maintains browser functionality with consistent design, option groups, and validation states.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/native-select",
@@ -1080,22 +1080,22 @@ export const components: ComponentInfo[] = [
     examples: [
       {
         name: "Default",
-        description: "A native select demo.",
+        description: "A styled native HTML select for mobile-optimized dropdowns with full browser compatibility.",
         registryName: "native-select-demo",
       },
       {
         name: "Disabled",
-        description: "A disabled native select.",
+        description: "A disabled native select demonstrating non-interactive state for locked or read-only fields.",
         registryName: "native-select-disabled",
       },
       {
         name: "Groups",
-        description: "A native select with groups.",
+        description: "A native select with option groups for organizing related choices under labeled categories.",
         registryName: "native-select-groups",
       },
       {
         name: "Invalid",
-        description: "A native select with invalid state.",
+        description: "A native select with invalid validation state showing error styling and accessible error messaging.",
         registryName: "native-select-invalid",
       },
     ],
@@ -1103,7 +1103,7 @@ export const components: ComponentInfo[] = [
   {
     id: "pagination",
     name: "Pagination",
-    description: "The Pagination component from Shadcn UI is a navigation control React element built with Tailwind CSS for Next.js applications, enabling users to navigate through paginated content efficiently. This accessible component displays page numbers, previous/next buttons, and optional first/last links with clear visual indicators for the current page. Perfect for search results, product listings, blog archives, and data tables, the Shadcn pagination supports customizable page counts, truncation with ellipsis, and responsive behavior. With built-in ARIA attributes for screen readers and keyboard navigation, this component provides developers with a user-friendly solution for multi-page navigation in modern React applications.",
+    description: "Page navigation with numbers, prev/next, and ellipsis. shadcn/ui Pagination supports customizable page counts, responsive truncation, and ARIA for Next.js.",
     category: "navigation",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/pagination",
@@ -1120,7 +1120,7 @@ export const components: ComponentInfo[] = [
   {
     id: "popover",
     name: "Popover",
-    description: "The Popover component from Shadcn UI is a floating content container built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible React component displays rich, interactive content like forms, menus, and detailed information triggered by user interaction with buttons or other elements. Perfect for date pickers, color selectors, user profiles, and complex filter interfaces, the Shadcn popover supports custom positioning, controlled and uncontrolled modes, and click-outside-to-close behavior. With built-in focus management, ARIA attributes, and smart positioning to stay within viewport bounds, this component provides developers with a versatile solution for contextual overlays and progressive disclosure in modern React applications.",
+    description: "Floating content overlay triggered by user interaction. shadcn/ui Popover built with Radix UI supports custom positioning, focus management, and click-outside-close.",
     category: "overlay",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/popover",
@@ -1137,7 +1137,7 @@ export const components: ComponentInfo[] = [
   {
     id: "progress",
     name: "Progress",
-    description: "The Progress component from Shadcn UI is a progress indicator React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component visualizes task completion with an animated horizontal bar showing percentage or indeterminate progress states. Perfect for file uploads, form submissions, loading operations, and multi-step workflows, the Shadcn progress bar supports custom colors, sizes, and animation speeds. With built-in ARIA attributes for screen reader announcements and smooth transitions, this component provides developers with a clear, accessible solution for communicating progress and loading states in modern React applications.",
+    description: "Animated progress bar for file uploads, loading, and multi-step workflows. shadcn/ui Progress built with Radix UI has ARIA support and smooth transitions.",
     category: "feedback",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/progress",
@@ -1154,7 +1154,7 @@ export const components: ComponentInfo[] = [
   {
     id: "radio-group",
     name: "Radio Group",
-    description: "The Radio Group component from Shadcn UI is a single-selection form control React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component allows users to select one option from a set of mutually exclusive choices with clear visual indicators. Perfect for payment methods, shipping options, subscription plans, and survey questions, the Shadcn radio group supports horizontal and vertical layouts, disabled options, and custom styling. With built-in keyboard navigation using Arrow keys, ARIA attributes for screen readers, and seamless integration with React Hook Form, this WCAG-compliant component provides developers with a robust solution for single-choice selections in modern React applications.",
+    description: "Single-choice selection built with Radix UI. shadcn/ui Radio Group supports Arrow key navigation, horizontal and vertical layout, and React Hook Form integration.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/radio-group",
@@ -1176,7 +1176,7 @@ export const components: ComponentInfo[] = [
   {
     id: "resizable",
     name: "Resizable",
-    description: "The Resizable component from Shadcn UI is an adjustable panel layout React element built with react-resizable-panels and styled with Tailwind CSS for Next.js applications. This accessible component creates draggable split-pane layouts where users can resize sections by dragging handles between panels. Perfect for code editors, file browsers, dashboard layouts, and multi-column interfaces, the Shadcn resizable supports horizontal and vertical orientations, min/max constraints, and collapsible panels. With built-in keyboard navigation, custom drag handles, and persistent sizing, this component provides developers with a powerful solution for flexible, user-customizable layouts in modern React applications.",
+    description: "Draggable split-pane layout built with react-resizable-panels. shadcn/ui Resizable supports horizontal and vertical panels, min/max sizes, and collapsible panels.",
     category: "layout",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/resizable",
@@ -1208,7 +1208,7 @@ export const components: ComponentInfo[] = [
   {
     id: "scroll-area",
     name: "Scroll Area",
-    description: "The Scroll Area component from Shadcn UI is a custom scrollbar React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component replaces native scrollbars with consistent, cross-browser styled scrollbars that match your design system. Perfect for chat interfaces, code editors, dropdown menus, and content panels with overflow, the Shadcn scroll area supports horizontal and vertical scrolling, custom scrollbar styling, and smooth scrolling behavior. With built-in accessibility features and responsive behavior, this component provides developers with a professional solution for custom scrollable containers in modern React applications.",
+    description: "Custom-styled cross-browser scrollbars built with Radix UI. shadcn/ui Scroll Area supports horizontal and vertical scrolling with consistent design in Next.js.",
     category: "layout",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/scroll-area",
@@ -1230,7 +1230,7 @@ export const components: ComponentInfo[] = [
   {
     id: "select",
     name: "Select",
-    description: "The Select component from Shadcn UI is a dropdown menu React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible form control provides developers with a polished alternative to native select elements, featuring custom styling, keyboard navigation, and search capabilities. Perfect for forms, filters, and option selection interfaces, the Shadcn select supports grouping, disabled options, placeholder text, and controlled/uncontrolled modes. With built-in scrolling for long lists and seamless integration with React Hook Form, this component offers full ARIA support and responsive behavior. Ideal for settings panels, data entry forms, and any interface requiring elegant option selection in modern React applications.",
+    description: "Polished custom select dropdown built with Radix UI. shadcn/ui Select supports option groups, search, keyboard nav, and React Hook Form integration for Next.js.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/select",
@@ -1257,7 +1257,7 @@ export const components: ComponentInfo[] = [
   {
     id: "sheet",
     name: "Sheet",
-    description: "The Sheet component from Shadcn UI is a side panel overlay React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component extends the Dialog functionality to display supplementary content from screen edges without leaving the current page context. Perfect for filter panels, shopping carts, detailed views, and navigation drawers, the Shadcn sheet supports multiple positions (left, right, top, bottom), scroll locking, and nested content. With built-in focus management, ARIA attributes, and smooth slide-in animations, this component provides developers with a flexible solution for contextual side panels in modern React applications.",
+    description: "Side panel overlay that slides from any screen edge. shadcn/ui Sheet extends Dialog with left, right, top, and bottom positions for React and Next.js apps.",
     category: "overlay",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/sheet",
@@ -1279,7 +1279,7 @@ export const components: ComponentInfo[] = [
   {
     id: "skeleton",
     name: "Skeleton",
-    description: "The Skeleton component from Shadcn UI is a loading placeholder React element built with Tailwind CSS for Next.js applications, displaying animated placeholders while content loads. This accessible component creates shimmer effects that match the shape and size of loading content, improving perceived performance and user experience. Perfect for loading states in dashboards, lists, profile cards, and data-heavy interfaces, the Shadcn skeleton supports custom shapes, sizes, and animation speeds. With responsive behavior and customizable styling, this component provides developers with a professional solution for content loading states that reduce layout shift in modern React applications.",
+    description: "Animated shimmer placeholder for loading content. shadcn/ui Skeleton prevents layout shift during data fetching with customizable shapes and sizes for Next.js.",
     category: "feedback",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/skeleton",
@@ -1296,7 +1296,7 @@ export const components: ComponentInfo[] = [
   {
     id: "slider",
     name: "Slider",
-    description: "The Slider component from Shadcn UI is a range input React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component allows users to select numeric values by dragging a handle along a track, perfect for volume controls, price ranges, and adjustable settings. Supporting single and multi-thumb configurations, min/max values, and step increments, the Shadcn slider integrates seamlessly with React Hook Form for form validation. With built-in keyboard navigation, ARIA attributes for screen readers, and customizable styling, this component provides developers with a smooth, interactive solution for range selection in modern React applications.",
+    description: "Range input for selecting numeric values by dragging. shadcn/ui Slider built with Radix UI supports single and multi-thumb, step increments, and React Hook Form.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/slider",
@@ -1313,7 +1313,7 @@ export const components: ComponentInfo[] = [
   {
     id: "sonner",
     name: "Sonner (Toast)",
-    description: "The Sonner Toast component from Shadcn UI is a notification React element built with the Sonner library and styled with Tailwind CSS for Next.js applications. This accessible component displays temporary messages, alerts, and notifications with smooth animations and automatic dismissal. Perfect for success confirmations, error messages, undo actions, and system notifications, the Shadcn toast supports multiple variants (success, error, warning), custom durations, and action buttons. With built-in stacking, promise handling for async operations, and customizable positioning, this component provides developers with a modern, elegant solution for toast notifications in modern React applications.",
+    description: "Toast notifications built with Sonner for Next.js. shadcn/ui Sonner supports success, error, and warning variants, auto-dismiss, promise handling, and stacking.",
     category: "feedback",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/sonner",
@@ -1330,7 +1330,7 @@ export const components: ComponentInfo[] = [
   {
     id: "switch",
     name: "Switch",
-    description: "The Switch component from Shadcn UI is a toggle control React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component provides a binary on/off control with smooth animations and clear visual states. Perfect for settings panels, feature toggles, notification preferences, and form options, the Shadcn switch supports controlled and uncontrolled modes, disabled states, and keyboard navigation. With built-in ARIA attributes for screen reader support and seamless integration with React Hook Form, this WCAG-compliant component provides developers with an elegant alternative to checkboxes for boolean settings in modern React applications.",
+    description: "Binary on/off toggle built with Radix UI. shadcn/ui Switch supports controlled mode, disabled state, keyboard navigation, and React Hook Form for Next.js apps.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/switch",
@@ -1352,7 +1352,7 @@ export const components: ComponentInfo[] = [
   {
     id: "table",
     name: "Table",
-    description: "The Table component from Shadcn UI is a responsive data display React element built with Tailwind CSS for Next.js applications, providing developers with semantic HTML table structures enhanced with modern styling. Perfect for dashboards, admin panels, data grids, and reporting interfaces, this component supports sorting, pagination, row selection, and custom cell rendering. With built-in responsive behavior that adapts to mobile screens, the Shadcn table integrates seamlessly with TanStack Table (React Table) for advanced features like filtering, grouping, and virtualization. Accessible with proper ARIA labels and keyboard navigation, it offers a professional solution for displaying structured data in modern React applications.",
+    description: "Semantic HTML table with sorting, pagination, and row selection. shadcn/ui Table integrates with TanStack Table for filtering and virtualization in Next.js.",
     category: "data",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/table",
@@ -1369,7 +1369,7 @@ export const components: ComponentInfo[] = [
   {
     id: "tabs",
     name: "Tabs",
-    description: "The Tabs component from Shadcn UI is a navigation React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component organizes content into multiple panels with a tab interface, displaying one section at a time while maintaining clean, organized layouts. Perfect for settings pages, product details, documentation, and multi-view interfaces, the Shadcn tabs support keyboard navigation with Arrow keys, custom styling, and controlled/uncontrolled modes. With built-in ARIA attributes for screen reader support and smooth transitions between panels, this component provides developers with a professional solution for content organization and navigation in modern React applications.",
+    description: "Tabbed content panels built with Radix UI. shadcn/ui Tabs supports Arrow key navigation, controlled mode, and smooth panel transitions for React and Next.js.",
     category: "navigation",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/tabs",
@@ -1386,7 +1386,7 @@ export const components: ComponentInfo[] = [
   {
     id: "textarea",
     name: "Textarea",
-    description: "The Textarea component from Shadcn UI is a multi-line text input React element built with Tailwind CSS for Next.js applications, providing developers with accessible long-form text entry capabilities. Supporting auto-resize, character limits, and validation states, this component integrates seamlessly with React Hook Form and other form libraries. Perfect for comments, descriptions, feedback forms, and message inputs, the Shadcn textarea offers custom styling, disabled states, placeholder text, and error handling. With full keyboard navigation, ARIA support for screen readers, and responsive behavior, this component provides developers with a robust solution for multi-line text input in modern React applications.",
+    description: "Multi-line text input with auto-resize and character limits. shadcn/ui Textarea integrates with React Hook Form for validation in forms, comments, and messages.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/textarea",
@@ -1428,7 +1428,7 @@ export const components: ComponentInfo[] = [
   {
     id: "toggle",
     name: "Toggle",
-    description: "The Toggle component from Shadcn UI is a two-state button React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component switches between pressed and unpressed states, commonly used for formatting controls and filter options. Perfect for text editors, toolbar buttons, view switchers, and formatting controls like bold/italic, the Shadcn toggle supports multiple size variants, outline styles, and disabled states. With built-in ARIA attributes for screen reader support and keyboard navigation, this component provides developers with a clean solution for stateful button controls in modern React applications.",
+    description: "Two-state pressed/unpressed button built with Radix UI. shadcn/ui Toggle supports outline and size variants for text formatting, filters, and toolbar controls.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/toggle",
@@ -1465,7 +1465,7 @@ export const components: ComponentInfo[] = [
   {
     id: "toggle-group",
     name: "Toggle Group",
-    description: "The Toggle Group component from Shadcn UI is a group of toggle buttons React element built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible component allows single or multiple selection among grouped options, commonly used for view modes and formatting toolbars. Perfect for text alignment controls, view switchers (list/grid), filter groups, and formatting toolbars, the Shadcn toggle group supports single and multiple selection modes, size variants, and custom spacing. With built-in ARIA attributes for screen reader support and keyboard navigation, this component provides developers with a professional solution for grouped stateful controls in modern React applications.",
+    description: "Group of toggles for single or multiple selection. shadcn/ui Toggle Group supports alignment controls, view switchers, filter bars, and size variants for Next.js.",
     category: "form",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/toggle-group",
@@ -1507,7 +1507,7 @@ export const components: ComponentInfo[] = [
   {
     id: "tooltip",
     name: "Tooltip",
-    description: "The Tooltip component from Shadcn UI is a floating information popup built with Radix UI primitives and styled with Tailwind CSS for Next.js applications. This accessible React component displays contextual help text, labels, and additional information when users hover over or focus on interactive elements. Perfect for icon buttons, truncated text, feature hints, and UI guidance, the Shadcn tooltip supports custom positioning, delay timing, and keyboard navigation. With built-in ARIA attributes for screen reader support and smart positioning to avoid viewport edges, this component provides developers with a WCAG-compliant solution for progressive disclosure and user assistance in modern React interfaces.",
+    description: "Accessible tooltip on hover or focus built with Radix UI. shadcn/ui Tooltip supports custom positioning, delay, ARIA attributes, and keyboard nav for Next.js.",
     category: "overlay",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/tooltip",
@@ -1524,7 +1524,7 @@ export const components: ComponentInfo[] = [
   {
     id: "spinner",
     name: "Spinner",
-    description: "A loading spinner component for indicating async operations and loading states.",
+    description: "Animated loading spinner for async operations and content loading. shadcn/ui Spinner supports size variants, color themes, and button and input group integration.",
     category: "feedback",
     documentation: {
       url: "https://ui.shadcn.com/docs/components/spinner",
@@ -1533,52 +1533,52 @@ export const components: ComponentInfo[] = [
     examples: [
       {
         name: "Default",
-        description: "A spinner demo.",
+        description: "A standard loading spinner for indicating asynchronous operations and content loading states.",
         registryName: "spinner-demo",
       },
       {
         name: "Badge",
-        description: "A spinner with badge.",
+        description: "A spinner combined with a badge for inline loading indicators next to status labels.",
         registryName: "spinner-badge",
       },
       {
         name: "Basic",
-        description: "A basic spinner.",
+        description: "A minimal bare spinner without wrapper for embedding in custom loading UI layouts.",
         registryName: "spinner-basic",
       },
       {
         name: "Button",
-        description: "A spinner with button.",
+        description: "A spinner embedded inside a button to show loading state during async form submissions.",
         registryName: "spinner-button",
       },
       {
         name: "Color",
-        description: "Spinner with different colors.",
+        description: "Spinner color variants matching brand and semantic colors for consistent loading indicators.",
         registryName: "spinner-color",
       },
       {
         name: "Custom",
-        description: "A custom spinner.",
+        description: "A custom spinner with configurable animation, stroke width, and design for unique brand styles.",
         registryName: "spinner-custom",
       },
       {
         name: "Empty",
-        description: "An empty spinner.",
+        description: "A spinner shown inside an empty state for loading content before data arrives.",
         registryName: "spinner-empty",
       },
       {
         name: "Input Group",
-        description: "A spinner with input group.",
+        description: "A spinner integrated in an input group addon for async validation and live search feedback.",
         registryName: "spinner-input-group",
       },
       {
         name: "Item",
-        description: "A spinner with item.",
+        description: "A spinner inside a list item for per-row loading states in dynamic content lists.",
         registryName: "spinner-item",
       },
       {
         name: "Size",
-        description: "Spinner with different sizes.",
+        description: "Spinner size variants (xs, sm, md, lg, xl) for different UI contexts and component sizes.",
         registryName: "spinner-size",
       },
     ],

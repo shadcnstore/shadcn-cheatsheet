@@ -4,8 +4,6 @@ const BASE_URL = "https://cheatsheet.shadcnstore.com"
 
 // Add JSON-LD structured data
 export default function JsonLd() {
-  const dateModified = new Date().toISOString()
-
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -36,7 +34,7 @@ export default function JsonLd() {
         "url": `${BASE_URL}/`,
         "name": "Shadcn UI Cheatsheet - Complete Component Guide & Examples",
         "datePublished": "2024-01-15",
-        "dateModified": dateModified,
+        "dateModified": "2024-01-15",
         "isPartOf": {
           "@id": `${BASE_URL}/#website`
         },

@@ -3,6 +3,7 @@ import { Metadata } from "next"
 import { components as simpleComponents } from "@/data/components-simple"
 import { generateComponentMetadata, extractVariantSlug } from "@/lib/seo-metadata"
 import { createVariantId } from "@/lib/data-adapter"
+import { BottomAEOContent } from "@/components/seo/bottom-aeo-content"
 import ComponentPageClient from "../component-page-client"
 
 const BASE_URL = "https://cheatsheet.shadcnstore.com"
@@ -93,6 +94,10 @@ export default async function ComponentVariantPage({
           variantName={example.name}
           variantSlug={variant}
         />
+      )}
+      {/* Server-rendered SEO background: visible to Googlebot, shows behind sheet on direct visits */}
+      {component && (
+        <BottomAEOContent componentId={id} componentName={component.name} />
       )}
       <Suspense fallback={<ComponentPageFallback />}>
         <ComponentPageClient

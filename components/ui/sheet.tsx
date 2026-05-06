@@ -36,7 +36,7 @@ function SheetOverlay({
     <SheetPrimitive.Overlay
       data-slot="sheet-overlay"
       className={cn(
-        "fixed inset-0 z-50 bg-foreground/50 transition-opacity duration-150",
+        "fixed inset-0 z-50 bg-foreground/30 transition-opacity duration-150",
         "data-[state=closed]:opacity-0",
         className
       )}

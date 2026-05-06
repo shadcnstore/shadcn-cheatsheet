@@ -2,6 +2,7 @@ import React, { Suspense } from "react"
 import { Metadata } from "next"
 import { components as simpleComponents } from "@/data/components-simple"
 import { generateComponentMetadata } from "@/lib/seo-metadata"
+import { BottomAEOContent } from "@/components/seo/bottom-aeo-content"
 import ComponentPageClient from "./component-page-client"
 
 const BASE_URL = "https://cheatsheet.shadcnstore.com"
@@ -56,6 +57,24 @@ function ComponentPageFallback() {
   )
 }
 
+/**
+ * Server-rendered SEO background page.
+ * The Sheet (PreviewPanel) is position:fixed so this renders in normal page flow
+ * and is fully visible to Googlebot. On direct visits it also shows as the
+ * background behind the translucent Sheet overlay.
+ */
+function ComponentSeoContent({ id }: { id: string }) {
+  const component = simpleComponents.find((c) => c.id === id)
+  if (!component) return null
+
+  return (
+    <BottomAEOContent
+      componentId={id}
+      componentName={component.name}
+    />
+  )
+}
+
 export default async function ComponentPage({
   params
 }: {
@@ -69,6 +88,7 @@ export default async function ComponentPage({
       {component && (
         <ComponentBreadcrumbJsonLd componentId={id} componentName={component.name} />
       )}
+      <ComponentSeoContent id={id} />
       <Suspense fallback={<ComponentPageFallback />}>
         <ComponentPageClient componentId={id} />
       </Suspense>

@@ -142,7 +142,10 @@ export default function ComponentPageClient({
 
   // Get variant from URL - support both query param (legacy) and prop (new nested route)
   const queryVariantId = searchParams.get('variant')
-  const variantId = propVariantId || queryVariantId || undefined
+  // Local state for active variant - avoids triggering @modal intercept route via Next.js router
+  const [activeVariantSlug, setActiveVariantSlug] = useState<string | undefined>(
+    propVariantId || queryVariantId || undefined
+  )
 
   // Get the original component info for metadata - memoize
   const componentInfo = React.useMemo(() =>
@@ -152,22 +155,22 @@ export default function ComponentPageClient({
 
   // Find variant using centralized utility - memoize
   const currentVariant = React.useMemo(() => {
-    if (!variantId || !componentDef || !componentInfo) {
+    if (!activeVariantSlug || !componentDef || !componentInfo) {
       return componentDef?.variants[0]
     }
     const foundVariant = componentDef.variants.find(v => {
-      const variant = findVariantBySlug(componentInfo, variantId)
+      const variant = findVariantBySlug(componentInfo, activeVariantSlug)
       return variant && v.id === variant.registryName
     })
     return foundVariant || componentDef.variants[0]
-  }, [variantId, componentDef, componentInfo])
+  }, [activeVariantSlug, componentDef, componentInfo])
 
   // Check if this is the default variant using centralized utility - memoize
   const isDefault = React.useMemo(() => {
     if (!componentInfo || !currentVariant) return true
     const example = componentInfo.examples.find(ex => ex.registryName === currentVariant.id)
-    return isDefaultVariant(componentInfo, example, variantId)
-  }, [componentInfo, currentVariant, variantId])
+    return isDefaultVariant(componentInfo, example, activeVariantSlug)
+  }, [componentInfo, currentVariant, activeVariantSlug])
 
   // Initialize navigation - split into two effects for better performance
   // 1. Update components list only once (memoized)
@@ -196,12 +199,12 @@ export default function ComponentPageClient({
       componentData.name,
       componentData.description,
       componentData.category || 'component',
-      variantId,
+      activeVariantSlug,
       currentVariant.name,
       currentVariant.description,
       isDefault
     )
-  }, [componentData, currentVariant, componentInfo, componentId, variantId, isDefault])
+  }, [componentData, currentVariant, componentInfo, componentId, activeVariantSlug, isDefault])
 
   // Update meta tags dynamically in <head> when component or variant changes
   useDynamicMetaTags(metadataConfig || {})
@@ -213,16 +216,18 @@ export default function ComponentPageClient({
     document.body.scrollTop = 0
   }, [])
 
-  // Handle variant change - use clean URL format
+  // Handle variant change - update URL via replaceState to avoid triggering
+  // the @modal intercept route which would open a second panel on top
   const handleVariantChange = useCallback(
     (variant: ComponentVariant) => {
-      // Extract the variant slug using centralized utility
       const variantSlug = extractVariantSlug(variant.id, componentId)
-
-      // Navigate to clean URL format: /component/[id]/[variant]
-      router.push(`/component/${componentId}/${variantSlug}`, { scroll: false })
+      const newUrl = variantSlug
+        ? `/component/${componentId}/${variantSlug}/`
+        : `/component/${componentId}/`
+      window.history.replaceState(window.history.state, '', newUrl)
+      setActiveVariantSlug(variantSlug || undefined)
     },
-    [router, componentId]
+    [componentId]
   )
 
   // Handle navigation
@@ -287,6 +292,13 @@ export default function ComponentPageClient({
         currentIndex={navigationData.currentIndex}
         totalComponents={navigationData.totalComponents}
         variantDescription={metadataConfig?.description}
+        seoContent={
+          <BottomAEOContent
+            componentId={componentId}
+            componentName={componentData.name}
+            className="px-4 py-4 space-y-4"
+          />
+        }
       >
         <ComponentErrorBoundary>
           <ComponentPreview
@@ -307,8 +319,6 @@ export default function ComponentPageClient({
         onCategorySelect={() => {}}
         placeholder="Search components..."
       />
-
-      <BottomAEOContent />
     </>
   )
 }
