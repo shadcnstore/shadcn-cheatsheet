@@ -5,7 +5,9 @@ import { extractVariantSlug } from "@/lib/seo-metadata"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://cheatsheet.shadcnstore.com"
-  const currentDate = new Date()
+  // Static W3C date (YYYY-MM-DD) — avoids invalid lastmod timestamp errors in sitemap validators.
+  // Update this whenever content is significantly changed.
+  const lastModified = "2026-05-08"
   const withTrailingSlash = (url: string): string => {
     return url.endsWith("/") ? url : `${url}/`
   }
@@ -14,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
     {
       url: withTrailingSlash(baseUrl),
-      lastModified: currentDate,
+      lastModified: lastModified,
       changeFrequency: "weekly",
       priority: 1.0,
     },
@@ -24,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   simpleComponents.forEach((component) => {
     routes.push({
       url: withTrailingSlash(`${baseUrl}/component/${component.id}`),
-      lastModified: currentDate,
+      lastModified: lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
     })
@@ -40,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       routes.push({
         url: withTrailingSlash(`${baseUrl}/component/${component.id}/${variantSlug}`),
-        lastModified: currentDate,
+        lastModified: lastModified,
         changeFrequency: "weekly",
         priority: 0.7,
       })
